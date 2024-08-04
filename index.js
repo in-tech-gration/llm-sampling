@@ -334,4 +334,7 @@ $(() => {
 	$("select#prompts").on('input', update_prompt);
 	$("div#samplers input").on('input', update_sample);
 	$("div#samplers").sortable({ update: update_sample });
+  $("div#samplers input").eq(0).prop( "checked", true );
+  $(".ui-sortable-handle:not(:first)").hide();
+  $("#temperature-container .row").slice(2).hide();
 });
